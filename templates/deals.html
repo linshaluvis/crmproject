@@ -1127,16 +1127,16 @@ padding: 10px;
 <br>
 <div class="container-fluid testimonial py-5">
         <div class="testimonial-header text-center">
-            <h1 class="display-5 mb-5 text-dark">DEALS</h1>
+            <h1 class="display-5 mb-5 text-light">DEALS</h1>
             <br>
         </div>
     </div>
 
     
   <div class="kanban-board">
-    <div class="kanban-column column">
+    <div class="kanban-column column" id="unarchived-container">
         <div class="column-header"> <header>
-            <h2 class="left-heading">new</h2>
+            <h2 style="color:#cfd949" class="left-heading">new</h2>
             <h2 class="right-heading text-center"><button>+</button></h2>
         </header>
         <div class="progress-bar-container">
@@ -1151,7 +1151,7 @@ padding: 10px;
             <h5 class="card-title">office design project 
                 </h5>
             <h6 class="card-subtitle mb-2 text-muted">                
-                <div class="price">$24.00<button class="button "onclick="showZoomedCard()"><i class="fa fa-info  text-dark" aria-hidden="true"></i></button></div>
+                <div class="price">$24.00</div>
             </h6>
             <p class="card-text"><div class="rating">
                 <span class="user-icon">                        <i class="fas fa-user fa-2x text-dark"></i>
@@ -1160,7 +1160,7 @@ padding: 10px;
             </div></p>
             <a href="#" class="card-link"><div class="buttons">
                 <button class="button button-primary">design</button>
-                <button class="button " onclick="archiveCard(this)"><i class="fa fa-archive  text-dark" aria-hidden="true"></i></button>
+                <button class="button "onclick="showZoomedCard()"><i class="fa fa-info  text-dark" aria-hidden="true"></i></button>
 
             </div></a>
           </div></div>
@@ -1168,7 +1168,7 @@ padding: 10px;
             <div class="card-body">
             <h5 class="card-title">need 20 desks</h5>
             <h6 class="card-subtitle mb-2 text-muted">                
-                <div class="price">$60,000<button class="button "onclick="showZoomedCard()"><i class="fa fa-info  text-dark" aria-hidden="true"></i></button></div>
+                <div class="price">$60,000</div>
             </h6>
             <p class="card-text"><div class="rating">
                 <span class="user-icon"><i class="fas fa-user  fa-2x text-dark"></i></span>
@@ -1176,15 +1176,15 @@ padding: 10px;
             </div></p>
             <a href="#" class="card-link"><div class="buttons">
                 <button class="button button-primary">product</button>
-                <button class="button " onclick="archiveCard(this)"><i class="fa fa-archive  text-dark" aria-hidden="true"></i></button>
+                <button class="button "onclick="showZoomedCard()"><i class="fa fa-info  text-dark" aria-hidden="true"></i></button>
 
             </div></a>
           </div></div>
     </div>
 
-    <div class="kanban-column column">
+    <div class="kanban-column column" id="restored-cards-container">
         <div class="column-header"><div class="column-header"> <header>
-            <h2 class="left-heading">Qualified</h2>
+            <h2 style="color:chartreuse" class="left-heading">Qualified</h2>
             <h2 class="right-heading text-center"><button>+</button></h2>
         </header>
         <div class="progress-bar-container">
@@ -1194,10 +1194,10 @@ padding: 10px;
             <div class="progress-segment"></div>
             <div class="progress-segment"></div>
         </div></div></div>
-        <div class="kanban-card border-warning"draggable="true"  onmousedown="startSwipe(event)" ontouchstart="startSwipe(event)" tabindex="0" onkeydown="handleKeyPress(event)" ><div class="card-body">
+        <div class="kanban-card border-warning"draggable="true"  ><div class="card-body">
             <h5 class="card-title">interest in your  product</h5>
             <h6 class="card-subtitle mb-2 text-muted">                
-                <div class="price">$99.99<button class="button "onclick="showZoomedCard()"><i class="fa fa-info  text-dark" aria-hidden="true"></i></button></div>
+                <div class="price">$99.99</div>
             </h6>
             <p class="card-text"><div class="rating">
                 <span class="user-icon"><i class="fas fa-user fa-2x text-dark"></i></span>
@@ -1206,14 +1206,14 @@ padding: 10px;
             <a href="#" class="card-link"><div class="buttons">
                 <button class="button button-primary">product</button>
                 <button class="button button-secondary">info</button>
-                <button class="button " onclick="archiveCard(this)"><i class="fa fa-archive  text-dark" aria-hidden="true"></i></button>
+                <button class="button "onclick="showZoomedCard()"><i class="fa fa-info  text-dark" aria-hidden="true"></i></button>
 
             </div></a>
           </div></div>
         <div class="kanban-card border-success"draggable="true"  ><div class="card-body">
             <h5 class="card-title">dellaPC:10 computer desks</h5>
             <h6 class="card-subtitle mb-2 text-muted">                
-                <div class="price">$35,000<button class="button "onclick="showZoomedCard()"><i class="fa fa-info  text-dark" aria-hidden="true"></i></button></div>
+                <div class="price">$35,000</div>
             </h6>
             <p class="card-text"><div class="rating">
                 <span class="user-icon"><i class="fas fa-user fa-2x text-dark"></i></span>
@@ -1222,14 +1222,14 @@ padding: 10px;
             <a href="#" class="card-link"><div class="buttons">
                 <button class="button button-primary">info</button>
                 <button class="button button-secondary">training</button>
-                <button class="button " onclick="archiveCard(this)"><i class="fa fa-archive  text-dark" aria-hidden="true"></i></button>
+                <button class="button "onclick="showZoomedCard()"><i class="fa fa-info  text-dark" aria-hidden="true"></i></button>
 
             </div></a>
           </div></div>
     </div>
     <div class="kanban-column column">
         <div class="column-header"><div class="column-header"> <header>
-            <h2 class="left-heading">Proposition</h2>
+            <h2  style="color:aquamarine;" class="left-heading">Proposition</h2>
             <h2 class="right-heading text-center"><button>+</button></h2>
         </header>
         <div class="progress-bar-container">
@@ -1242,21 +1242,21 @@ padding: 10px;
         <div class="kanban-card border-info" draggable="true" ><div class="card-body">
             <h5 class="card-title">open space design</h5>
             <h6 class="card-subtitle mb-2 text-muted">                
-                <div class="price">$11.00<button class="button "onclick="showZoomedCard()"><i class="fa fa-info  text-dark" aria-hidden="true"></i></button></div>
+                <div class="price">$11.00</div>
             <p class="card-text"><div class="rating">
                 <span class="user-icon"><i class="fas fa-user fa-2x text-dark"></i></span>
                 <div class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
             </div></p>
             <a href="#" class="card-link"><div class="buttons">
                 <button class="button button-secondary">Design</button>
-                <button class="button " onclick="archiveCard(this)"><i class="fa fa-archive  text-dark" aria-hidden="true"></i></button>
+                <button class="button "onclick="showZoomedCard()"><i class="fa fa-info  text-dark" aria-hidden="true"></i></button>
 
             </div></a>
           </div></div>
         <div class="kanban-card border-primary" draggable="true" ><div class="card-body">
             <h5 class="card-title">office design and architecture</h5>
             <h6 class="card-subtitle mb-2 text-muted">                
-                <div class="price">$9000<button class="button "onclick="showZoomedCard()"><i class="fa fa-info  text-dark" aria-hidden="true"></i></button></div>
+                <div class="price">$9000</div>
             </h6>
             <p class="card-text"><div class="rating">
                 <span class="user-icon"><i class="fas fa-user fa-2x text-dark"></i></span>
@@ -1264,8 +1264,7 @@ padding: 10px;
             </div></p>
             <a href="#" class="card-link"><div class="buttons">
                 <button class="button button-primary">Design</button>
-                <button class="button " onclick="archiveCard(this)"><i class="fa fa-archive  text-dark" aria-hidden="true"></i></button>
-
+                <button class="button "onclick="showZoomedCard()"><i class="fa fa-info  text-dark" aria-hidden="true"></i></button>
             </div></a>
           </div></div>
     </div>
@@ -1273,7 +1272,7 @@ padding: 10px;
 
     <div class="kanban-column column">
         <div class="column-header"><div class="column-header"> <header>
-            <h2 class="left-heading">won</h2>
+            <h2  style="color:bisque;" class="left-heading">won</h2>
             <h2 class="right-heading text-center"><button>+</button></h2>
         </header>
         <div class="progress-bar-container">
@@ -1287,7 +1286,7 @@ padding: 10px;
             <h5 class="card-title">access to online
                 </h5>
             <h6 class="card-subtitle mb-2 text-muted">                
-                <div class="price">$20099<button class="button "onclick="showZoomedCard()"><i class="fa fa-info  text-dark" aria-hidden="true"></i></button></div>
+                <div class="price">$20099</div>
             </h6>
             <p class="card-text"><div class="rating">
                 <span class="user-icon"><i class="fas fa-user fa-2x text-dark"></i></span>
@@ -1295,14 +1294,13 @@ padding: 10px;
             </div></p>
             <a href="#" class="card-link"><div class="buttons">
                 <button class="button button-primary">Services</button>
-                <button class="button " onclick="archiveCard(this)" ><i class="fa fa-archive  text-dark" aria-hidden="true"></i></button>
-
+                <button class="button "onclick="showZoomedCard()"><i class="fa fa-info  text-dark" aria-hidden="true"></i></button>
             </div></a>
           </div></div>
         <div class="kanban-card border-warning" draggable="true" ><div class="card-body">
             <h5 class="card-title">costomizable DESK</h5>
             <h6 class="card-subtitle mb-2 text-muted">                
-                <div class="price">$15.99<button class="button "onclick="showZoomedCard()"><i class="fa fa-info  text-dark" aria-hidden="true"></i></button></div>
+                <div class="price">$15.99</div>
             </h6>
             <p class="card-text"><div class="rating">
                 <span class="user-icon"><i class="fas fa-user fa-2x text-dark"></i></span>
@@ -1311,18 +1309,18 @@ padding: 10px;
             <a href="#" class="card-link"><div class="buttons">
                 <button class="button button-primary">product</button>
                 <button class="button button-secondary">Details</button>
-                <button class="button " onclick="archiveCard(this)"><i class="fa fa-archive  text-dark" aria-hidden="true"></i></button>
-
+                <button class="button "onclick="showZoomedCard()"><i class="fa fa-info  text-dark" aria-hidden="true"></i></button>
             </div></a>
           </div></div>
     </div>
     <div class="popup-menu" id="popup-menu">
-        <button id="close-btn">x</button>
+       
 
-        <div id="delete-btn" class="popup-option">Delete Card</div>
-        <div id="archive-btn" class="popup-option">Archive Card</div>
-        <div id="lost-deal-btn" class="popup-option">Mark as Lost Deal</div>
-        <div id="won-btn" class="popup-option">Mark as Won</div>
+        <div id="delete-btn" style="background-color:#ef5d5d;" class="popup-option ">Delete Card</div>
+        <div id="archive-btn" class="popup-option" style="background-color:#cfd949;">Archive Card</div>
+        <div id="lost-deal-btn" class="popup-option" style="background-color:#efacac;">Mark as Lost Deal</div>
+        <div id="won-btn" class="popup-option" style="background-color:#68d358;">Mark as Won</div>
+        
     </div>
 </div>
 <div class="zoomed-card" onclick="hideZoomedCard()">
@@ -1376,123 +1374,157 @@ padding: 10px;
 </div>
 
 </div></div>
-<script>// Get the bottom four columns
-    const bottomColumns = document.querySelectorAll('.kanban-column:nth-last-child(-n+4)');
-    
-    // Add dragover event listener to each bottom column
-    bottomColumns.forEach(column => {
-        column.addEventListener('dragover', showPopupMenu);
-    });
-    
-    // Get the popup menu and its options
-    const popupMenu = document.getElementById('popup-menu');
-    const deleteBtn = document.getElementById('delete-btn');
-    const archiveBtn = document.getElementById('archive-btn');
-    const lostDealBtn = document.getElementById('lost-deal-btn');
-    const wonBtn = document.getElementById('won-btn');
-    
-    // Add dragover event listener to each option
-    deleteBtn.addEventListener('dragover', allowDrop);
-    archiveBtn.addEventListener('dragover', allowDrop);
-    lostDealBtn.addEventListener('dragover', allowDrop);
-    wonBtn.addEventListener('dragover', allowDrop);
-    
-    // Add drop event listener to each option
-    deleteBtn.addEventListener('drop', deleteCard);
-    archiveBtn.addEventListener('drop', archiveCard);
-    lostDealBtn.addEventListener('drop', markAsLostDeal);
-    wonBtn.addEventListener('drop', markAsWon);
-    
-    // Function to show the popup menu when a card is dragged over a bottom column
-    function showPopupMenu(e) {
-        e.preventDefault();
-        popupMenu.classList.add('show');
-    }
-    
-    // Function to allow dropping on the buttons
-    function allowDrop(e) {
-        e.preventDefault();
-    }
-    
-    // Function to delete the card
-    function deleteCard(e) {
-        const card = document.querySelector('.dragging');
-        if (card) {
-            card.remove();
-            popupMenu.classList.remove('show');
-        }
-    }
-    
-    // Function to archive the card
-    function archiveCard(e) {
-        const card = document.querySelector('.dragging');
-        if (card) {
-            card.classList.add('archived');
-            popupMenu.classList.remove('show');
-        }
-    }
-    
-    // Function to mark the card as lost deal
-    function markAsLostDeal(e) {
-        const card = document.querySelector('.dragging');
-        if (card) {
-            card.classList.add('lost-deal');
-            popupMenu.classList.remove('show');
-        }
-    }
-    
-    // Function to mark the card as won
-    function markAsWon(e) {
-        const card = document.querySelector('.dragging');
-        if (card) {
-            card.classList.add('won');
-            popupMenu.classList.remove('show');
-        }
-    }
-    // Get the close button
-const closeBtn = document.getElementById('close-btn');
+<script>
+// Get the bottom columns
+const bottomColumns = document.querySelectorAll('.kanban-column:nth-last-child(-n+4)');
 
-// Add click event listener to the close button
-closeBtn.addEventListener('click', closePopupMenu);
+// Add dragover event listener to each bottom column
+bottomColumns.forEach(column => {
+    column.addEventListener('dragover', showPopupMenu);
+});
 
-// Function to close the popup menu
-function closePopupMenu() {
+// Get the popup menu and its options
+const popupMenu = document.getElementById('popup-menu');
+const deleteBtn = document.getElementById('delete-btn');
+const archiveBtn = document.getElementById('archive-btn');
+const lostDealBtn = document.getElementById('lost-deal-btn');
+const wonBtn = document.getElementById('won-btn');
+
+// Add dragover event listener to each option
+deleteBtn.addEventListener('dragover', allowDrop);
+archiveBtn.addEventListener('dragover', allowDrop);
+lostDealBtn.addEventListener('dragover', allowDrop);
+wonBtn.addEventListener('dragover', allowDrop);
+
+// Add drop event listener to each option
+deleteBtn.addEventListener('drop', deleteCard);
+archiveBtn.addEventListener('drop', archiveCard);
+lostDealBtn.addEventListener('drop', markAsLostDeal);
+wonBtn.addEventListener('drop', markAsWon);
+
+// Function to show the popup menu when a card is dragged over a bottom column
+function showPopupMenu(e) {
+    e.preventDefault();
+    popupMenu.classList.add('show');
+}
+
+// Function to allow dropping on the buttons
+function allowDrop(e) {
+    e.preventDefault();
+}
+
+// Function to delete the card
+function deleteCard(e) {
+    const card = document.querySelector('.dragging');
+    if (card) {
+        card.remove();
+        popupMenu.classList.remove('show');
+        alert('Card deleted successfully!');
+
+    }
+}
+
+// Function to archive the card
+function archiveCard(e) {
+  const card = document.querySelector('.dragging');
+    if (card) {
+        // Get archived cards from local storage or initialize an empty array
+        const archivedCards = JSON.parse(localStorage.getItem('archivedCards')) || [];
+
+        // Push the card content to the archived cards array
+        archivedCards.push(card.innerHTML);
+
+        // Save the updated archived cards array back to local storage
+        localStorage.setItem('archivedCards', JSON.stringify(archivedCards));
+
+        // Remove the card from the current location
+        card.remove();
+
+        // Hide the popup menu
+        popupMenu.classList.remove('show');
+
+        // Alert the user
+        alert('Card archived successfully!');
+    }
+
+}
+
+// Function to mark the card as lost deal
+function markAsLostDeal(e) {
+    const card = document.querySelector('.dragging');
+    if (card) {
+        card.classList.add('lost-deal');
+        popupMenu.classList.remove('show');
+    }
+}
+
+// Function to mark the card as won
+function markAsWon(e) {
+    const card = document.querySelector('.dragging');
+    if (card) {
+        card.classList.add('won');
+        popupMenu.classList.remove('show');
+    }
+}
+  
+// Function to hide the popup menu after a delay
+function hidePopupMenu() {
     popupMenu.classList.remove('show');
 }
 
+
+
+
     
 </script>
- <script>
-    const archiveContainer = document.getElementById('archive-container');
+<script>
+  // Function to append a card to a specified column
+  function appendCardToColumn(cardContent, columnId) {
+      const column = document.getElementById(columnId);
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = cardContent;
+      card.draggable = true; // Make the card draggable
+      column.appendChild(card);
+  }
 
-    archiveContainer.addEventListener('dragover', dragOver);
-    archiveContainer.addEventListener('dragenter', dragEnter);
-    archiveContainer.addEventListener('dragleave', dragLeave);
-    archiveContainer.addEventListener('drop', drop);
-    
-    function dragOver(e) {
-        e.preventDefault();
-    }
-    
-    function dragEnter() {
-        this.classList.add('over');
-    }
-    
-    function dragLeave() {
-        this.classList.remove('over');
-    }
-    
-    function drop() {
-        const card = document.querySelector('.dragging');
-        if (card) {
-            card.classList.add('archived');
-        }
-        this.classList.remove('over');
-    }
-    
-    
+  document.addEventListener('DOMContentLoaded', function() {
+      // Retrieve archived cards from local storage
+      const archivedCards = JSON.parse(localStorage.getItem('archivedCards')) || [];
 
- </script>
+      // Get the container for restored cards
+      const restoredContainer = document.getElementById('restored-cards-container');
+
+      // Append each archived card to the restored container
+      archivedCards.forEach(restoredCardContent => {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = restoredCardContent;
+          card.draggable = true; // Make the card draggable
+          restoredContainer.appendChild(card);
+      });
+
+      // Add event listeners for drag events
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+          card.addEventListener('dragstart', dragStart);
+          card.addEventListener('dragend', dragEnd);
+      });
+  });
+
+  // Function to handle drag start event
+  function dragStart(event) {
+      event.dataTransfer.setData('text/plain', event.target.id);
+      event.target.classList.add('dragging');
+  }
+
+  // Function to handle drag end event
+  function dragEnd(event) {
+      event.target.classList.remove('dragging');
+  }
+</script>
+
+ 
 <!-- Tastimonial End -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
@@ -1568,4 +1600,7 @@ function closePopupMenu() {
         zoomedCard.style.display = 'none';
       }
 </script>
+
 {% endblock  %}
+</body>
+</html>

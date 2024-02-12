@@ -52,7 +52,7 @@
        
 
           <a class="nav-item" href="{% url 'contact' %}"><i class="fas fa-envelope"></i>  contact Us</a>
-          <a class="navbar-brand" href="{% url 'deals' %}"><i class="fas fa-user-shield"></i>  Admin</a>
+          <a class="navbar-brand" href="{% url 'deals' %}"><i class="fas fa-user-shield"></i>  DEALS</a>
           
 
 
@@ -66,7 +66,7 @@
         <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="offcanvasDarkNavbar"
              aria-labelledby="offcanvasDarkNavbarLabel">
             <div class="offcanvas-header bg-dark text-bg-dark">
-                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">ADMIN</h5>
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">DEALS</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
             </div>
@@ -74,52 +74,53 @@
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{% url 'home' %}">
-                            <i class="fas fa-home"></i> Home
+                            <i class="fas fa-home"></i> CRM
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'archived' %}">
+                            <i class="fas fa-archive"></i> ARCHIVED
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{% url 'firstpage' %}">
-                            <i class="fas fa-user"></i> Clients
+                            <i class="fas fa-user"></i> INVENTORY MANAGEMENT
+                        </a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <i class="fas fa-plus"></i> MARKETING
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">
-                            <i class="fas fa-truck"></i> Delivery
+                            <i class="fas fa-cogs"></i> SITES
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">
-                            <i class="fas fa-plus"></i> Add Products
+                            <i class="fas fa-thumbs-up"></i>STORES
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">
-                            <i class="fas fa-cogs"></i> Manage Products
+                            <i class="fas fa-clipboard-list"></i> TASKS
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">
-                            <i class="fas fa-thumbs-up"></i> Sanction
+                            <i class="fas fa-truck"></i> COLLABORATION
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">
-                            <i class="fas fa-clipboard-list"></i> Order Details
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">
-                            <i class="fas fa-truck"></i> Delivery Progress
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">
-                            <i class="fas fa-tasks"></i> Assign Orders
+                            <i class="fas fa-tasks"></i> PROJECTS
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'home' %}">
-                            <i class="fas fa-sign-out-alt"></i> Logout
+                            <i class="fas fa-sign-out-alt"></i> RECYCLE BIN
                         </a>
                     </li>
                 </ul>

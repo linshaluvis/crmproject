@@ -12,3 +12,5 @@ def contact(request):
     return render(request,'contact.html')
 def deals(request):
     return render(request,'deals.html')
+def archived(request):
+    return render(request,'archive.html')
